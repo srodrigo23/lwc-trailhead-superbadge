@@ -1,0 +1,25 @@
+<template>
+    <template if:false={wiredRecord.data}>
+        <lightning-card>
+            <span class="slds-align_absolute-center no-boat-height">{ label.labelPleaseSelectABoat }</span>
+        </lightning-card>
+    </template>
+    <template if:true={wiredRecord.data}>
+        <lightning-tabset>
+            <lightning-tab label={label.labelDetails} icon-name={detailsTabIconName}>
+                <lightning-card>
+
+                    <lightning-button label={label.Full_Details} onclick={navigateToRecordViewPage}></lightning-button>
+                </lightning-card>
+                
+            </lightning-tab>
+
+            <lightning-tab label={label.labelReviews} value='reviews'>
+
+            </lightning-tab>
+            <lightning-tab label={label.labelAddReview} >
+
+            </lightning-tab>
+        </lightning-tabset>
+    </template>
+</template>
