@@ -27,7 +27,6 @@ export default class BoatMap extends LightningElement {
 	set recordId(value) {
 		this.setAttribute('boatId', value);
 		this.boatId = value;
-		console.log(this.boatId);
 	}
 
 	error = undefined;
@@ -51,7 +50,6 @@ export default class BoatMap extends LightningElement {
 			this.error = error;
 			this.boatId = undefined;
 			this.mapMarkers = [];
-			console.log(this.error);
 		}
 	}
 
